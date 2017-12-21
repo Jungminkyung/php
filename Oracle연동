@@ -1,0 +1,23 @@
+ reference : https://www.lesstif.com/pages/viewpage.action?pageId=23757143
+             http://www.oracle.com/technetwork/articles/dsl/technote-php-instant-084410.html
+             
+             
+  downloadpage : http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html
+                 http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
+                 
+  1.download BASIC,DEVEL
+  2.yum localinstall *.rpm
+  3.pear download pecl/oci8
+    tar zxvf oci8-2.0.8.tgz
+    cd oci8-2.0.8
+    phpize  
+    ./configure --with-oci8=shared,instantclient,/usr/lib/oracle/12.1/client64/lib
+    make && make install
+  4.php.ini ->  extension=oci8.so
+  
+  phpinfo()
+  
+  
+  
+ 
+ 

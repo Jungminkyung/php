@@ -1,0 +1,35 @@
+라라벨설치 ( https://laravel.kr/docs/5.1/installation  )
+
+composer global require "laravel/installer"
+
+/etc/rc.local 에 PATH=$PATH:~/.config/composer/vendor/bin
+
+putty 재접속.
+
+
+laravel new blog
+
+cd blog
+
+chmod -R 777 storage
+
+cd bootstrap
+
+chown apache:apache cache
+
+index.php 없이 동작 하는지 확인
+
+http://101.101.165.234/blog12/public/
+
+
+
+=단축url사용을 위해=
+
+/etc/httpd/httpd.conf에서 mod_rewrite.so를 추가해준다. so파일은 이미 설치되있다.
+
+LoadModule rewrite_module modules/mod_rewrite.so
+
+DocumentRoot의 Directory설정에 AllowOverride가 None으로 되어있을텐데 All로 바꿔준다. (Files로 바꾸라는 말이 있는데 안되더라..)
+
+
+

@@ -1,0 +1,10 @@
+$e = new Exception;
+error_log(var_export($e─>getTraceAsString(), true));
+
+$e = new \Exception;
+var_dump($e─>getTraceAsString());
+
+
+$backtrace = debug_backtrace();
+print_r( $backtrace );
+
